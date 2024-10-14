@@ -19,18 +19,20 @@ By splitting the CV into manageable parts, converting the visual data to text, a
 The project starts by breaking down a large CV into smaller, important sections (e.g., Education, Work Experience, Skills). This step ensures that the document is processed more efficiently, especially when dealing with long or complex CVs.
 
 **Example:**
-![CV Split Example](utils/cv_split_example.png)
+![CV Split Example](utils/part2.jpeg)
+![CV Split Example](utils/part3.jpeg)
 
 ### 2. Using OCR to Convert CV Image to Text
 Once the CV is split, we use the `pdf2image` library to convert the CV from PDF format into images. Then, `pytesseract` extracts the text from each image. The extracted text for each part is saved in individual text files for further use.
 
 **Example:**
-![OCR Text Extraction](utils/ocr_extraction_example.png)
+![OCR Text Extraction](utils/text_img1.PNG)
+![OCR Text Extraction](utils/text_img2.PNG)
 
 ### 3. Answering Questions with RAG
 After extracting the text from all parts of the CV, we apply **Retrieval-Augmented Generation (RAG)** to enable the system to answer specific questions. The text serves as the source of knowledge, and the model retrieves relevant sections from the CV to provide accurate answers to user queries.
 
 **Example:**
-![RAG Question Answering](utils/rag_example.png)
+![RAG Question Answering](utils/QA_img.PNG)
 
 ---
